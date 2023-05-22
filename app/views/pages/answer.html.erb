@@ -1,0 +1,23 @@
+<div class=" m-3">
+
+  <div class="bg-warning bg-opacity-10 w-50 mb-2 p-2">
+   <h3><%= params[:question]%></h3>
+    <p>-You</p>
+  </div>
+
+
+  <div class="bg-warning bg-opacity-10 w-50 mb-2 p-2">
+    <% if @answer == "I am going to work" %>
+    <h3><%= "Great!" %></h3>
+    <% elsif @answer.include?("?") %>
+    <h3> <%= "Silly question, get dressed and go to work!" %></h3>
+    <% else %>
+    <h3><%= "I don't care, get dressed and go to work!" %></h3>
+    <% end %>
+    <p>-Your Coaching</p>
+  </div>
+  <div>
+  <%= link_to "Ask a new question", ask_path, class: "text-decoration-none text-primary" %>
+  </div>
+
+<div>
